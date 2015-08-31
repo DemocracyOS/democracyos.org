@@ -16,7 +16,9 @@ import { Data } from 'src/models'
 
 const app = express()
 const log = debug('democracyos.org:boot')
-const mongoUrl = process.env.MONGO_URL || 'mongodb://localhost/democracyos-website'
+const mongoUrl =  process.env.MONGOLAB_URI ||
+                  process.env.MONGO_URL ||
+                  'mongodb://localhost/democracyos-website'
 
 /**
  * Setup
