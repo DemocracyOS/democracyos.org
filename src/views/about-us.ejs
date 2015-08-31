@@ -175,7 +175,7 @@
       <p class="subtitle">We are looking for idealists that can put words into action.<br>Anyewhere you are in the world, <strong>we can help you get a DemocracyOS community started</strong>.</p>
       <div class="w-container">
         <div class="w-form">
-          <form class="jobform" id="wf-form-Work-With-Us" name="wf-form-Work-With-Us" data-name="Work With Us">
+          <form class="jobform local" id="wf-form-Work-With-Us" name="wf-form-Work-With-Us" data-name="Work With Us">
             <label class="jobfield" for="name-2">Full Name</label><input class="w-input jobtext" id="name-2" type="text" placeholder="Enter your name" name="name-2" data-name="Name 2"><label class="jobfield" for="email-2">E-mail</label><input class="w-input jobtext" id="email-2" type="email" placeholder="Enter your email address" name="email-2" data-name="Email 2" required="required"><label class="jobfield" for="Location-2">Where are you from?</label><input class="w-input jobtext" id="Location-2" type="text" placeholder="City &amp; Country" name="Location-2" data-name="Location 2" required="required"><label class="jobfield" for="Website-2">Personal Site</label><input class="w-input jobtext" id="Website-2" type="text" placeholder="http://" name="Website-2" data-name="Website 2" required="required"><label class="jobfield" for="field-2">Position</label>
             <select class="w-select jobtext" id="field-2" name="field-2" data-name="Field 2">
               <option value="">Select one...</option>
@@ -201,56 +201,6 @@
         </div>
       </div>
     </div>
-    <div class="w-section media footer">
-      <div class="w-container">
-        <div class="w-row">
-          <div class="w-col w-col-3 footercolumn">
-            <h5>Foundation</h5>
-            <ul class="w-list-unstyled">
-              <li class="w-clearfix socialmedia"><a class="footerlinks" href="/about-us">About</a></li>
-              <li class="w-clearfix socialmedia"><a class="footerlinks" href="/team">TEAM</a></li>
-              <li class="w-clearfix socialmedia"><a class="footerlinks" href="/blog">BLOG</a></li>
-              <li class="w-clearfix socialmedia"><a class="footerlinks" href="/contact">CONTACT</a></li>
-            </ul>
-          </div>
-          <div class="w-col w-col-4 footercolumn">
-            <h5>Resources</h5>
-            <ul class="w-list-unstyled">
-              <li class="w-clearfix socialmedia"><a class="footerlinks" href="/democracies">Democracies</a></li>
-              <li class="w-clearfix socialmedia"><a class="footerlinks" href="http://github.com/democracyos/app" target="_blank">CODE</a></li>
-              <li class="w-clearfix socialmedia"><a class="footerlinks" href="/legal">LEGAL</a></li>
-              <li class="w-clearfix socialmedia"><a class="footerlinks" href="/transparency">TRANSPARENCY</a></li>
-            </ul>
-          </div>
-          <div class="w-col w-col-5 w-clearfix minicol">
-            <h5>Connect</h5>
-            <div class="w-form">
-              <form class="w-clearfix" id="email-form-2" name="email-form-2" data-name="Email Form 2"><input class="w-input footerform" id="email-2" type="email" placeholder="Enter your email address" name="email" data-name="Email 2" required="required"><input class="w-button subscribebutton" type="submit" value="Subscribe" data-wait="Please wait..."></form>
-              <div class="w-form-done">
-                <p>Thank you! Your submission has been received!</p>
-              </div>
-              <div class="w-form-fail">
-                <p>Oops! Something went wrong while submitting the form :(</p>
-              </div>
-            </div>
-            <h5>Social</h5>
-            <a class="w-inline-block footersociallink" href="http://twitter.com/democracyos" target="_blank"><img src="https://daks2k3a4ib2z.cloudfront.net/54b5dacca1dc10190edce926/54c16b398bc3d5d54022cb62_social-twitter.png"></a><a class="w-inline-block footersociallink" href="http://facebook.com/democracyosfoundation" target="_blank"><img src="https://daks2k3a4ib2z.cloudfront.net/54b5dacca1dc10190edce926/54c16ad4c2766cd440205381_scoial-facebook.png"></a><a class="w-inline-block footersociallink" href="http://blog.democracyos.org" target="_blank"><img src="https://daks2k3a4ib2z.cloudfront.net/54b5dacca1dc10190edce926/54c16ae074fbffb22b86b664_social-tumblr.png"></a><a class="w-inline-block footersociallink" href="https://www.github.com/democracyos" target="_blank"><img src="https://daks2k3a4ib2z.cloudfront.net/54b5dacca1dc10190edce926/54d3fbafdd1988d75368d5db_social-github.png"></a>
-          </div>
-        </div>
-      </div>
-      <div class="w-container copyright">
-        <div class="w-row">
-          <div class="w-col w-col-6">
-            <div>Copyright © 2015 The DemocracyOS Foundation</div>
-          </div>
-          <div class="w-col w-col-6">
-            <div class="byemail"><a href="mailto:speak@democracyos.org" class="maillink" target="_blank">speak@DemocracyOS.org</a></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script type="text/javascript" src="https://daks2k3a4ib2z.cloudfront.net/54b5dacca1dc10190edce926/js/webflow.60b331898.js"></script>
-    <!--[if lte IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+    <% include footer %>
   </body>
 </html>

@@ -23,9 +23,24 @@ const mongoUrl = process.env.MONGO_URL || 'mongodb://localhost/democracyos-websi
  */
 
 mongoose.connect(mongoUrl)
+app.set('view engine', 'ejs')
+app.set('views', join(__dirname, '..', 'views'))
 app.use(serve(join(__dirname, '..', 'static')))
-app.use(serve(join(__dirname, '..', 'views'), { extensions: 'html' }))
+// app.use(serve(join(__dirname, '..', 'views'), { extensions: 'html' }))
 app.use(bodyParser.urlencoded({ extended: true }))
+
+/**
+ * Static pages
+ */
+
+app.get('/', (req, res) => res.render('index.ejs'))
+app.get('/about-us', (req, res) => res.render('about-us.ejs'))
+app.get('/democracies', (req, res) => res.render('democracies.ejs'))
+app.get('/blog', (req, res) => res.render('blog.ejs'))
+
+/**
+ * Form submit
+ */
 
 app.post('/api/form', (req, res) => {
   const { body } = req;
