@@ -2,22 +2,24 @@
 
 ![DemocracyOS website](https://cldup.com/rmf7vXC-Fk.png)
 
-## Requirements
+### Requirements
 
+  - node.js or io.js
+  - npm
   - MongoDB
 
-## Installation
+### Installation
 
 ```
 npm install
 ```
 
-# Run
+### Run
 
 ```
 npm start
 ```
 
-# Remote deployment (Heroku)
+### Remote deployment (Heroku)
 
 You just need `MONGOLAB_URI` or any other MongoDB connection string using `MONGO_URL` instead
