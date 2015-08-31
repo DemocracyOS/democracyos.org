@@ -30,21 +30,29 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.post('/api/form', (req, res) => {
   const { body } = req;
   const data = new Data({payload: body})
-  data.save((err, data) => {
-    if (err) {
-      log(`❌  Error while saving data: %j`, err)
-      const errorCode = 500
-      return res.status(errorCode).send({
-        msg: err.message,
-        code: errorCode,
-        err: err
-      })
-    }
+  data.save()
+    .then((data) => {
+      const successCode = 200
 
-    const successCode = 200
-    log(`✅  Data ${data.id} saved successfully`)
-    res.status(successCode).send({ msg: 'ok', code: successCode })
-  })
+      log(`✅  Data ${data.id} saved successfully`)
+      send(res, successCode, {
+        msg: 'ok',
+        code: successCode
+      })
+    })
+    .onReject((err) => {
+      const errorCode = 500
+
+      log(`❌  Error while saving data: %j`, err)
+      send(res, errorCode, {
+        msg: err.message,
+        code: errorCode
+      })
+    })
 })
+
+function send(res, status, payload) {
+  res.status(status).send(payload)
+}
 
 export default app
