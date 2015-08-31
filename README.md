@@ -23,3 +23,7 @@ npm start
 ### Remote deployment (Heroku)
 
 You just need `MONGOLAB_URI` or any other MongoDB connection string using `MONGO_URL` instead
+
+### Running site
+
+https://website-democracyos.herokuapp.com/
