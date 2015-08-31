@@ -461,7 +461,12 @@ module.exports = function($, _) {
     // Read site ID
     // NOTE: If this site is exported, the HTML tag must retain the data-wf-site attribute for forms to work
     if (!siteId) { afterSubmit(data); return; }
-    var url = FORM_API_HOST + '/api/v1/form/' + siteId;
+    var url;
+    if (form.hasClass('local')) {
+      url = '/api/form';
+    } else {
+      url = FORM_API_HOST + '/api/v1/form/' + siteId;
+    }
 
     // Work around same-protocol IE XDR limitation - without this IE9 and below forms won't submit
     if (retro && url.indexOf(FORM_SUBMIT_HOST) >= 0) {
